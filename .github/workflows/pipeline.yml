@@ -39,7 +39,7 @@ jobs:
           python data_prep.py
 
   model-training:
-    needs: data-prep
+    needs: [data-prep]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
